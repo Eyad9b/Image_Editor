@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: sans-serif;
+    background-color: #363636;
+  
+}
+h2{
+    color: #fff;
+    text-align: center;
+    margin: 10px 30px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    width: 80vw;
+    height: 95vh;
+    border-radius: 1rem;
+    background-color: #222;
+    margin: 1rem auto;
+}
+.image{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.image img, canvas{
+    max-width: 50vw;
+    max-height: 60vh;
+}
+.upload input{
+display: none;
+}
+.upload{
+    margin: 1rem;
+    flex-direction: row;
+}
+.upload label{
+    color: #fff;
+    margin: 1rem 2rem;
+    border: 1px dashed #fff;
+    padding: 1rem;
+}
+.upload label:hover{
+    cursor: pointer;
+}
+.filters{
+    margin: 5px;
+}
+.filters ul, .filters li{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   color: #fff;
+   direction: rtl;
+   margin: 5px 8px;
+}
+.filters ul li:last-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+span:hover{
+    cursor: pointer;
+}
+.filters ul li a ,span{
+  color: #fff;
+  background-color: #060;
+  padding: 14px 20px;
+  text-decoration: none;
+ 
+}
+@media screen and (max-width:768px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:885px) {
+    .container{
+        width: 90vw;
+       height: 100%;
+    }
+    .img-box img,canvas{
+       max-width: 80vw;
+    }
+}
+
+.loader {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+   
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #FFF;
+    position: absolute;
+    
+    animation: rotationBreak 3s ease-in-out infinite alternate;
+  }
+  .loader::after {
+    border-color: #FF3D00;
+    animation-direction: alternate-reverse;
+  }
+  
+  @keyframes rotationBreak {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+      
+  

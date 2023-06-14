@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image_Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loader"></div>
+    <h2>PHOTO EDITOR</h2>
+    <div class="container">
+        
+        <div class="image">
+            <div class="img-box" id="img-box">
+                <img id="img">
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="upload">
+                <label for="upload">upload</label>
+                <input type="file" name="upload" id="upload">
+            </div>
+            
+        </div>
+        <div class="filters">
+            <ul>
+
+            <li>
+            <label for="saturate">saturate</label>
+            <input type="range" id="saturate" min="0" max="200" value="100">
+            </li>
+
+            <li>
+                <label for="contast">contast</label>
+                <input type="range" id="contast" min="0" max="200" value="100">
+                </li>
+                
+            <li>
+                <label for="brightness">brightness</label>
+                <input type="range" id="brightness" min="0" max="200" value="100">
+                </li>
+
+            <li>
+                <label for="sepia">sepia</label>
+                <input type="range" id="sepia" min="0" max="200" value="0" >
+                </li>
+
+            <li>
+                <label for="grayScale">grayScale</label>
+                <input type="range" id="grayScale" step="0.1" min="0" max="1" value="0">
+                </li>
+
+            <li>
+                <label for="blur">blur</label>
+                <input type="range" id="blur" step="0.1" min="0" max="1" value="0">
+                </li>
+
+            <li>
+                <label for="hue-rotate">hue-rotate</label>
+                <input type="range" id="hue-rotate" min="0" max="350" value="0">
+                </li>
+            <li><a href="" download="true" id="download">Download</a>
+                <span onclick="Rest()" id="Rest">Rest</span>
+            </li>
+           
+
+            </ul>
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>    
+</body>
+</html>
